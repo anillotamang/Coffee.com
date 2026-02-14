@@ -353,16 +353,16 @@ object-fit: contain;
     }
 
     body.show-mobile-menu::before{
-        content: "";
-        position: fixed;
-left: 0;
-top: 0;
-height: 0;
-height: 100%;
-width:100%;
-backdrop-filter: blur(5px);
-background-color: transparent;
-pointer-events: none;
+    content: "";
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width:100%;
+    backdrop-filter: blur(5px);
+    background-color: transparent;
+    pointer-events: none;  /* 👈 ADD THIS */
+}
 
 
 
@@ -460,6 +460,7 @@ pointer-events: none;
 }
     
 }
+
 
 
 
