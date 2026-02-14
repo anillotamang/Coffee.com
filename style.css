@@ -19,8 +19,13 @@
 
 }
 }
+html {
+    scroll-padding-top: 100px; /* match your navbar height */
+}
+
 :root {
-    /* Colors */
+
+   
     --main-color: rgb(255, 255, 255);
     --bg-color: #561204;
     --text-color: #10f34d;
@@ -97,13 +102,13 @@ img {
 
 }
     header {
-        position: fixed;
-        z-index: 5;
-        width:100%;
-
-        
-        background-color: var(--bg-color);
-        padding: 5px;
+    position: fixed;
+    top: 0;          /* ADD THIS LINE */
+    left: 0;         /* optional but good practice */
+    z-index: 1000;   /* increase so it stays above content */
+    width:100%;
+    background-color: var(--bg-color);
+    padding: 5px;
 }
 
 header .navbar {
@@ -111,8 +116,9 @@ header .navbar {
     padding: 20px;
     align-items: center;
     justify-content: space-between;
+
 }
-.navbar .nav-logo .logo-text {
+.navbar .nav-logo .logo-text {  
     color: var(--main-color);
     font-size: var(--font-size-xl);
     font-weight: var(--font-weight-semibold);
@@ -356,6 +362,7 @@ height: 100%;
 width:100%;
 backdrop-filter: blur(5px);
 background-color: transparent;
+pointer-events: none;
 
 
 
